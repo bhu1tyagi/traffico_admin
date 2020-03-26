@@ -1,0 +1,44 @@
+<!-- <!DOCTYPE html>
+<html>
+  <body>
+    <p>Click the button to get your coordinates.</p>
+
+    <button onclick="getLocation()">Try It</button>
+
+    <p id="demo"></p>
+    <%var lat; %>
+    <%var long;%>
+  
+
+    <script>
+      var x = document.getElementById("demo");
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {
+        lat=position.coords.latitude;
+        var long=position.coords.longitude;
+        var keyapi="5e46fee484834cd3ad217a3a8efd7774";
+        // x.innerHTML =
+        //   "Latitude: " +
+        //   position.coords.latitude +
+        //   "<br>Longitude: " +
+        //   position.coords.longitude;
+        var id = "https://api.opencagedata.com/geocode/v1/json?q="+lat+"%2C"+long+"&key="+keyapi+"&pretty=1";
+        console.log(lat,long);
+      }
+    </script>
+    <form method="get" action="/dashboard">
+      <input type="text" name="lat" value="<%lat%>">
+      <input type="text" name="long" value="<%long%>">
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
+ -->
